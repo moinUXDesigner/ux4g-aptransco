@@ -1,0 +1,42 @@
+[
+  {
+    "id": "T-2026-0142",
+    "title": "Supply of 132kV Insulators",
+    "category": "Procurement — Communication Infrastructure",
+    "published": "2026-07-15",
+    "closing": "2026-08-05",
+    "status": "Open"
+  },
+  {
+    "id": "T-2026-0139",
+    "title": "132kV Underground Cable Works — Guntur District",
+    "category": "Civil & Power Systems",
+    "published": "2026-07-10",
+    "closing": "2026-07-31",
+    "status": "Open"
+  },
+  {
+    "id": "T-2026-0135",
+    "title": "IT Services — SLDC Reporting Platform Upgrade",
+    "category": "Information Technology",
+    "published": "2026-06-28",
+    "closing": "2026-07-20",
+    "status": "Open"
+  },
+  {
+    "id": "T-2026-0128",
+    "title": "Supply & Erection of 400kV Transmission Towers",
+    "category": "Civil & Power Systems",
+    "published": "2026-06-15",
+    "closing": "2026-07-10",
+    "status": "Closed"
+  },
+  {
+    "id": "T-2026-0121",
+    "title": "Annual Maintenance Contract — 220kV Substations",
+    "category": "Maintenance",
+    "published": "2026-06-02",
+    "closing": "2026-06-25",
+    "status": "Closed"
+  }
+]

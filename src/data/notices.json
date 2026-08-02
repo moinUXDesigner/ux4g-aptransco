@@ -1,0 +1,30 @@
+[
+  {
+    "id": "n1",
+    "date": "2026-07-16",
+    "type": "Recruitment",
+    "tag": "info",
+    "title": "APTRANSCO Recruitment 2026 — Notification for Engineer Trainee Posts"
+  },
+  {
+    "id": "n2",
+    "date": "2026-07-15",
+    "type": "Tender",
+    "tag": "success",
+    "title": "Supply of 132kV Insulators — Tender Notice"
+  },
+  {
+    "id": "n3",
+    "date": "2026-07-12",
+    "type": "Tender",
+    "tag": "success",
+    "title": "Direct Recruitment of AEEs (Electrical/Civil/Telecom) — 2026"
+  },
+  {
+    "id": "n4",
+    "date": "2026-07-08",
+    "type": "Notice",
+    "tag": "neutral",
+    "title": "Scheduled Maintenance — 220kV Substation, Vijayawada"
+  }
+]

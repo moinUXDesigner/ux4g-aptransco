@@ -1,0 +1,30 @@
+[
+  {
+    "id": "p1",
+    "title": "400kV Grid Expansion — Rayalaseema Corridor",
+    "voltage": "400kV",
+    "status": "In Progress",
+    "district": "Kurnool"
+  },
+  {
+    "id": "p2",
+    "title": "220kV Substation Modernisation",
+    "voltage": "220kV",
+    "status": "In Progress",
+    "district": "Visakhapatnam"
+  },
+  {
+    "id": "p3",
+    "title": "132kV Underground Cabling — Urban Reliability Programme",
+    "voltage": "132kV",
+    "status": "Planning",
+    "district": "Vijayawada"
+  },
+  {
+    "id": "p4",
+    "title": "Renewable Evacuation Infrastructure — Solar Corridor",
+    "voltage": "400kV",
+    "status": "In Progress",
+    "district": "Anantapur"
+  }
+]

@@ -1,0 +1,53 @@
+/*
+ * Custom CSS — required exception, not a preference.
+ *
+ * ux4g-web-components@1.0.2 ships CSS that sets
+ * `font-family:UX4G Material Icons Outlined` on `.ux4g-icon-outlined` (and five
+ * sibling icon classes), but the shipped stylesheet's "Foundations" layer
+ * embeds only the Noto Sans @font-face — there is no @font-face for any of
+ * the six "UX4G Material Icons*" families, despite the package README
+ * claiming icons are base64-embedded (grep-verified against the installed
+ * package; zero matches for `@font-face.*Material`). Every `.ux4g-icon-*`
+ * glyph therefore has no font to render against and falls back to literal
+ * ligature text ("search", "person", …).
+ *
+ * UX4G's icon ligature names ("search", "home", "check", …) are Google's
+ * Material Symbols naming convention, so this declares the missing font
+ * face under UX4G's exact expected family name, backed by Google's hosted
+ * font file. Only the Outlined weight is declared because it is the only
+ * icon variant used in this build.
+ */
+@font-face {
+  font-family: 'UX4G Material Icons Outlined';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/materialsymbolsoutlined/v364/kJF1BvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oDMzByHX9rA6RzaxHMPdY43zj-jCxv3fzvRNU22ZXGJpEpjC_1p-p_4MrImHCIJIZrDCvHOem.ttf')
+    format('truetype');
+}
+
+/*
+ * Vendor cascade bug, not a preference — reproduced with the same
+ * doubled-specificity technique ux4g-web-components ships its own
+ * cascade-fixes.css with (see that file's header comment).
+ *
+ * The base rule `.ux4g-icon-outlined{color:var(--ux4g-text-neutral-inverse)}`
+ * is meant to make icons legible on solid-colour surfaces (badges, filled
+ * buttons). But several per-component chunks in the shipped stylesheet
+ * compile a bare, unscoped `.ux4g-icon-outlined{color:...}` rule where a
+ * parent selector was clearly intended (e.g. one such rule sits right next
+ * to `.ux4g-input-sm .ux4g-input-input{...}`, so it was very likely meant
+ * to read `.ux4g-input-sm .ux4g-icon-outlined`). Being later in source
+ * order and equal specificity, these win the cascade globally — including
+ * inside `ux4g-badge-icon-*`, where it makes the icon glyph the same near-
+ * black as body text on a dark brand-coloured badge: invisible (well under
+ * the WCAG 3:1 non-text contrast minimum Design.md §9 requires).
+ *
+ * Fix: restore inheritance from the badge itself, which already sets the
+ * correct colour per variant (inverse for coloured badges, neutral-primary
+ * for `-neutral`). This doesn't hardcode a colour — it removes the bug's
+ * override so the existing token relationship works as shipped.
+ */
+[class*='ux4g-badge-icon-'] > .ux4g-icon-outlined.ux4g-icon-outlined {
+  color: inherit;
+}

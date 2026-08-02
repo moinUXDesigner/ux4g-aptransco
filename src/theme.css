@@ -1,0 +1,54 @@
+/*
+ * APTRANSCO brand theme — root token overrides only.
+ *
+ * Colours approved from the user-supplied redesign mockup (see
+ * plans/aptransco-redesign-plan.md): brand primary navy, brand secondary
+ * green, brand tertiary purple. Token names below were confirmed against
+ * the shipped ux4g-web-components@1.0.2 stylesheet (grepped, not guessed).
+ *
+ * Scope: only the tokens that directly carry "the brand colour" are
+ * overridden (solid fill, text/icon, border, focus ring) for each of
+ * Primary/Secondary/Tertiary. Derived state tokens (hover/soft/subtle/
+ * emphasis/stronger) are intentionally left at their UX4G defaults — they
+ * are a computed tint ramp off the primitive palette and re-deriving an
+ * accessible ramp for three custom hues in both themes is a Figma-level
+ * design-token exercise, not something to improvise here. See the
+ * completion report for this as a named, unresolved exception.
+ *
+ * Dark-mode text/border/focus values are lightened with color-mix() rather
+ * than reusing the flat light-mode hex, mirroring UX4G's own light(600)/
+ * dark(300) relationship — a flat navy text colour on a near-black dark
+ * background would fail WCAG contrast, which Design.md §9 explicitly
+ * requires preserving.
+ */
+
+:root {
+  --ux4g-bg-primary-strong: #123b73 !important;
+  --ux4g-text-brand-primary-default: #123b73 !important;
+  --ux4g-text-primary-strong: #123b73 !important;
+  --ux4g-border-color-primary-default: #123b73 !important;
+  --ux4g-border-color-primary-strong: #123b73 !important;
+  --ux4g-outline-color-focus: #123b73 !important;
+
+  --ux4g-bg-secondary-strong: #1e8a44 !important;
+  --ux4g-text-brand-secondary-default: #1e8a44 !important;
+  --ux4g-border-color-secondary-default: #1e8a44 !important;
+
+  --ux4g-bg-tertiary-strong: #7c3aed !important;
+  --ux4g-text-brand-tertiary-default: #7c3aed !important;
+  --ux4g-border-color-tertiary-default: #7c3aed !important;
+}
+
+:root[data-theme="dark"] {
+  --ux4g-text-brand-primary-default: color-mix(in srgb, #123b73 55%, white) !important;
+  --ux4g-text-primary-strong: color-mix(in srgb, #123b73 55%, white) !important;
+  --ux4g-border-color-primary-default: color-mix(in srgb, #123b73 55%, white) !important;
+  --ux4g-border-color-primary-strong: color-mix(in srgb, #123b73 55%, white) !important;
+  --ux4g-outline-color-focus: color-mix(in srgb, #123b73 55%, white) !important;
+
+  --ux4g-text-brand-secondary-default: color-mix(in srgb, #1e8a44 55%, white) !important;
+  --ux4g-border-color-secondary-default: color-mix(in srgb, #1e8a44 55%, white) !important;
+
+  --ux4g-text-brand-tertiary-default: color-mix(in srgb, #7c3aed 55%, white) !important;
+  --ux4g-border-color-tertiary-default: color-mix(in srgb, #7c3aed 55%, white) !important;
+}
