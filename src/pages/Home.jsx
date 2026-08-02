@@ -59,8 +59,8 @@ export default function Home() {
                 placeholder="Search services, tenders, documents..."
                 aria-label="Search services, tenders, documents"
               />
-              <button className="ux4g-search-btn" type="submit">
-                Search
+              <button className="ux4g-search-btn" type="submit" aria-label="Search">
+                <span className="ux4g-icon-outlined" aria-hidden="true">search</span>
               </button>
             </div>
           </form>
