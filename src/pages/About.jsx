@@ -33,8 +33,8 @@ export default function About() {
       </section>
 
       <section id="vision" className="ux4g-container ux4g-py-xl">
-        <div className="ux4g-row ux4g-gutter-m">
-          <div className="ux4g-col-12 ux4g-col-md-6 ux4g-card ux4g-card-outline ux4g-card-vertical">
+        <div className="ux4g-grid ux4g-gutter-l ux4g-grid-cols-1 ux4g-grid-cols-md-2">
+          <div className="ux4g-card ux4g-card-outline ux4g-card-vertical">
             <div className="ux4g-card-body">
               <p className="ux4g-title-m-strong ux4g-mb-s">Vision</p>
               <p className="ux4g-body-m-default ux4g-mb-none">
@@ -44,7 +44,7 @@ export default function About() {
               </p>
             </div>
           </div>
-          <div className="ux4g-col-12 ux4g-col-md-6 ux4g-card ux4g-card-outline ux4g-card-vertical">
+          <div className="ux4g-card ux4g-card-outline ux4g-card-vertical">
             <div className="ux4g-card-body">
               <p className="ux4g-title-m-strong ux4g-mb-s">Mission</p>
               <p className="ux4g-body-m-default ux4g-mb-none">
@@ -80,9 +80,9 @@ export default function About() {
 
       <section id="awards" className="ux4g-container ux4g-py-xl">
         <h2 className="ux4g-heading-s-strong ux4g-mb-m">Awards &amp; Recognition</h2>
-        <div className="ux4g-row ux4g-gutter-m">
+        <div className="ux4g-grid ux4g-gutter-l ux4g-grid-cols-1 ux4g-grid-cols-sm-2 ux4g-grid-cols-lg-3">
           {AWARDS.map((award) => (
-            <div key={award.title} className="ux4g-col-12 ux4g-col-sm-6 ux4g-col-lg-4 ux4g-card ux4g-card-outline ux4g-card-vertical">
+            <div key={award.title} className="ux4g-card ux4g-card-outline ux4g-card-vertical">
               <div className="ux4g-card-body">
                 <span className="ux4g-tag-outline-primary ux4g-tag-s">{award.year}</span>
                 <p className="ux4g-body-m-default ux4g-mt-s ux4g-mb-none">{award.title}</p>

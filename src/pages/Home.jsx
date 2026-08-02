@@ -73,12 +73,12 @@ export default function Home() {
           <h2 className="ux4g-heading-s-strong ux4g-mb-none">Quick Actions</h2>
           <Link className="ux4g-text-link-sm" to="/services">View All</Link>
         </div>
-        <div className="ux4g-row ux4g-gutter-m">
+        <div className="ux4g-grid ux4g-gutter-l ux4g-grid-cols-1 ux4g-grid-cols-sm-2 ux4g-grid-cols-lg-3">
           {QUICK_ACTIONS.map((item) => (
             <Link
               key={item.title}
               to={item.to}
-              className="ux4g-col-12 ux4g-col-sm-6 ux4g-col-lg-4 ux4g-card ux4g-card-outline ux4g-card-vertical"
+              className="ux4g-card ux4g-card-outline ux4g-card-vertical"
             >
               <div className="ux4g-card-body ux4g-d-flex ux4g-inline-gap-m ux4g-ai-center">
                 <span
@@ -100,9 +100,9 @@ export default function Home() {
       {/* At a Glance */}
       <section className="ux4g-container ux4g-py-xl">
         <h2 className="ux4g-heading-s-strong ux4g-mb-m">At a Glance</h2>
-        <div className="ux4g-row ux4g-gutter-m">
+        <div className="ux4g-grid ux4g-gutter-l ux4g-grid-cols-1 ux4g-grid-cols-sm-2 ux4g-grid-cols-lg-4">
           {STATS.map((stat) => (
-            <div key={stat.label} className="ux4g-col-12 ux4g-col-sm-6 ux4g-col-lg-3 ux4g-card ux4g-card-outline ux4g-card-vertical">
+            <div key={stat.label} className="ux4g-card ux4g-card-outline ux4g-card-vertical">
               <div className="ux4g-card-body ux4g-d-flex ux4g-inline-gap-m ux4g-ai-center">
                 <span className={STAT_BADGE[stat.tone]} aria-hidden="true">
                   <span className="ux4g-icon-outlined">{stat.icon}</span>
@@ -152,12 +152,12 @@ export default function Home() {
       {/* I Need */}
       <section className="ux4g-container ux4g-py-xl">
         <h2 className="ux4g-heading-s-strong ux4g-mb-m">I Need</h2>
-        <div className="ux4g-row ux4g-gutter-m">
+        <div className="ux4g-grid ux4g-gutter-l ux4g-grid-cols-1 ux4g-grid-cols-sm-2 ux4g-grid-cols-lg-4">
           {I_NEED.map((item) => (
             <Link
               key={item.title}
               to={item.to}
-              className="ux4g-col-12 ux4g-col-sm-6 ux4g-col-lg-3 ux4g-card ux4g-card-outline ux4g-card-vertical"
+              className="ux4g-card ux4g-card-outline ux4g-card-vertical"
             >
               <div className="ux4g-card-body ux4g-d-flex ux4g-inline-gap-m ux4g-ai-center">
                 <span className="ux4g-icon-outlined ux4g-fs-32 ux4g-text-primary" aria-hidden="true">

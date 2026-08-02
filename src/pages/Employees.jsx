@@ -18,9 +18,9 @@ export default function Employees() {
       />
 
       <section className="ux4g-container ux4g-py-xl">
-        <div className="ux4g-row ux4g-gutter-m">
+        <div className="ux4g-grid ux4g-gutter-l ux4g-grid-cols-1 ux4g-grid-cols-sm-2 ux4g-grid-cols-lg-3">
           {HR_LINKS.map((link) => (
-            <div key={link.id} id={link.id} className="ux4g-col-12 ux4g-col-sm-6 ux4g-col-lg-4 ux4g-card ux4g-card-outline ux4g-card-vertical">
+            <div key={link.id} id={link.id} className="ux4g-card ux4g-card-outline ux4g-card-vertical">
               <div className="ux4g-card-body ux4g-d-flex ux4g-inline-gap-m ux4g-ai-center">
                 <span className="ux4g-badge-icon-primary" aria-hidden="true">
                   <span className="ux4g-icon-outlined">{link.icon}</span>

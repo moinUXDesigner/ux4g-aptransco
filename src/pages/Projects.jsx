@@ -21,20 +21,20 @@ export default function Projects() {
       />
 
       <section className="ux4g-container ux4g-py-xl">
-        <div className="ux4g-row ux4g-gutter-m ux4g-mb-xl">
-          <div className="ux4g-col-12 ux4g-col-sm-6 ux4g-col-lg-4 ux4g-card ux4g-card-solid ux4g-card-vertical">
+        <div className="ux4g-grid ux4g-gutter-l ux4g-grid-cols-1 ux4g-grid-cols-sm-2 ux4g-grid-cols-lg-3 ux4g-mb-xl">
+          <div className="ux4g-card ux4g-card-solid ux4g-card-vertical">
             <div className="ux4g-card-body">
               <p className="ux4g-label-m-strong ux4g-mb-none">400kV Network</p>
               <p className="ux4g-heading-m-strong ux4g-mb-none">1,842 km</p>
             </div>
           </div>
-          <div className="ux4g-col-12 ux4g-col-sm-6 ux4g-col-lg-4 ux4g-card ux4g-card-solid ux4g-card-vertical">
+          <div className="ux4g-card ux4g-card-solid ux4g-card-vertical">
             <div className="ux4g-card-body">
               <p className="ux4g-label-m-strong ux4g-mb-none">220kV Network</p>
               <p className="ux4g-heading-m-strong ux4g-mb-none">4,916 km</p>
             </div>
           </div>
-          <div className="ux4g-col-12 ux4g-col-sm-6 ux4g-col-lg-4 ux4g-card ux4g-card-solid ux4g-card-vertical">
+          <div className="ux4g-card ux4g-card-solid ux4g-card-vertical">
             <div className="ux4g-card-body">
               <p className="ux4g-label-m-strong ux4g-mb-none">132kV Network</p>
               <p className="ux4g-heading-m-strong ux4g-mb-none">7,203 km</p>
